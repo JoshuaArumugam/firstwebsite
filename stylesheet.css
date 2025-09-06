@@ -13,7 +13,7 @@ body {
     width: 100%;
     text-align: center;
     background-color: black;
-    border-bottom: 3px gray solid;
+    border-bottom: 3px white solid;
 }
 
 #pagetitle {
@@ -44,6 +44,7 @@ body {
 
 .flexcontainer {
     display: flex;
+    outline: 2px solid white;
 }
 
 .flexcontainer > div {
@@ -83,4 +84,94 @@ body {
     margin: 0;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.headingcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    color: white;
+    font-size: 50px;
+    width: fit-content;
+    outline: 2px solid white;
+    padding: 5px;
+    background-color: black;
+}
+
+#recipecontainer {
+    background-color: black;
+    outline: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#recipecontainer > img {
+    width: 20%;
+}
+
+#recipecontainer > div {
+    width: 50%;
+    height: 290px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#recipecontainer > div >  h1 {
+    font-size: 35px;
+    margin: 0;
+    color: white;
+}
+
+#recipecontainer > div > ul > li {
+    font-size: 17px;
+    color: white;
+}
+
+#recipecontainer > div > ol > li {
+    font-size: 17px;
+    color: white;
+}
+
+#quizcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quizcontainer > div {
+    width: fit-content;
+    background-color: black;
+    border: 2px solid white;
+}
+
+#quizcontainer > div > ol > li {
+    color: white;
+}
+
+#quizcontainer > div > ol {
+    padding-right: 30px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+#quizcontainer > div > ol > ul > li > label > span > p {
+    color: white;
+    margin: 3px;
+}
+
+#quizcontainer > div > ol > ul {
+    list-style-type: none;
+}
+
+#quizcontainer > div {
+    padding-left: 150px;
+    padding-right: 150px;
 }
