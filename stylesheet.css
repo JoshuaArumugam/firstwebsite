@@ -1,0 +1,86 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url("mustardbackground.avif");
+    background-size: 10%;
+}
+
+#topbar {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    border-bottom: 3px gray solid;
+}
+
+#pagetitle {
+    color: yellow;
+    size: 50px;
+    margin: 0;
+    padding-top: 16px;
+}
+
+.text {
+    color: white;
+}
+
+#navbar {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar > li {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbartext {
+    margin: 0;
+}
+
+.flexcontainer {
+    display: flex;
+}
+
+.flexcontainer > div {
+    width: 33.33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexcontainer > div > img {
+    max-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#box1 {
+    background-color: yellow;
+}
+
+#box2 {
+    background-color: wheat;
+}
+
+#box3 {
+    background-color: brown;
+}
+
+.flexcontainer > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.flexcontainer > div > div > p {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
