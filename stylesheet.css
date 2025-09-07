@@ -16,11 +16,16 @@ body {
     border-bottom: 3px white solid;
 }
 
+h1, p, li {
+    font-family: Tahoma, sans-serif;
+}
+
 #pagetitle {
     color: yellow;
     size: 50px;
     margin: 0;
     padding-top: 16px;
+    font-family: 'Brush Script MT', cursive;
 }
 
 .text {
@@ -174,4 +179,47 @@ label {
 #quizcontainer > div {
     padding-left: 150px;
     padding-right: 150px;
+}
+
+#quizcontainer > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quizcontainer > div > div > p {
+    color: white;
+    outline: 2px solid white;
+    background-color: black;
+    margin: 10px;
+    padding: 5px;
+}
+
+#quizcontainer > div > div > button {
+    background-color: black;
+    outline: 2px solid white;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pricescontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    outline: 2px solid white;
+    margin-bottom: 40px;
+}
+
+.prices > img {
+    margin: 10px;
 }

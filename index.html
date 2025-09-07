@@ -4,6 +4,25 @@
         <link rel="stylesheet" href="stylesheet.css">
         <title>Mustard</title>
         <link rel="icon" type="image/x-icon" href="mustardbackground.avif">
+        <script>
+            var answers = ["B", "D", "A", "B", "D"],
+            tot = answers.length;
+            function getCheckedValue(radioName) {
+                var radios = document.getElementsByName(radioName);
+                for (var y = 0; y < radios.length; y++)
+                    if (radios[y].checked) return radios[y].value;
+            }
+            function getScore() {
+                var score = 0;
+                for (var i = 0; i < tot; i++)
+                    if (getCheckedValue("question" + i) === answers[i]) score += 1;
+                return score;
+            }
+            function returnScore() {
+                document.getElementById("results").innerHTML =
+                    getScore() + "/" + tot;
+            }
+        </script>
     </head>
     <body>
         <div id="topbar">
@@ -12,21 +31,21 @@
             </h1>
             <ul id="navbar">
                 <li>
-                    <p class="text navbartext">Nav 1</p>
+                    <a href="#typesofmustard"><p class="text navbartext">Types of Mustard</p></a>
                 </li>
                 <li>
-                    <p class="text navbartext">Nav 2</p>
+                    <a href="#mustardrecipe"><p class="text navbartext">Mustard Recipe</p></a>
                 </li>
                 <li>
-                    <p class="text navbartext">Nav 3</p>
+                    <a href="#mustardquiz"><p class="text navbartext">Mustard Quiz</p></a>
                 </li>
                 <li>
-                    <p class="text navbartext">Nav 4</p>
+                    <a href="#mustardprices"><p class="text navbartext">Mustard Prices</p></a>
                 </li>
             </ul>
         </div>
         <div class="headingcontainer">
-            <h1 class="heading">
+            <h1 class="heading" id="typesofmustard">
                 Types of Mustard
             </h1>
         </div>
@@ -68,7 +87,7 @@
             </div>
         </div>
         <div class="headingcontainer">
-            <h1 class="heading">
+            <h1 class="heading" id="mustardrecipe">
                 Mustard Recipe
             </h1>
         </div>
@@ -111,7 +130,7 @@
             </div>
         </div>
         <div class="headingcontainer">
-            <h1 class="heading">
+            <h1 class="heading" id="mustardquiz">
                 Mustard Quiz
             </h1>
         </div>
@@ -127,17 +146,17 @@
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="question0" value="A"><span><p>900</p></span>
+                                <input type="radio" name="question0" value="B"><span><p>900</p></span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="question0" value="A"><span><p>25 BCE</p></span>
+                                <input type="radio" name="question0" value="C"><span><p>25 BCE</p></span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="question0" value="A"><span><p>6741</p></span>
+                                <input type="radio" name="question0" value="D"><span><p>6741</p></span>
                             </label>
                         </li>
                     </ul>
@@ -145,26 +164,109 @@
                     <ul class="choices">
                         <li>
                             <label>
-                                <input type="radio" name="question0" value="A"><span><p>Wholegrain mustard</p></span>
+                                <input type="radio" name="question1" value="A"><span><p>Wholegrain mustard</p></span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="question0" value="A"><span><p>Brown mustard</p></span>
+                                <input type="radio" name="question1" value="B"><span><p>Brown mustard</p></span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="question0" value="A"><span><p>Honey mustard</p></span>
+                                <input type="radio" name="question1" value="C"><span><p>Honey mustard</p></span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="question0" value="A"><span><p>Yellow mustard</p></span>
+                                <input type="radio" name="question1" value="D"><span><p>Yellow mustard</p></span>
+                            </label>
+                        </li>
+                    </ul>
+                    <li>What country produces the most mustard?</li>
+                    <ul class="choices">
+                        <li>
+                            <label>
+                                <input type="radio" name="question2" value="A"><span><p>Nepal</p></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="question2" value="B"><span><p>Russia</p></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="question2" value="C"><span><p>Canada</p></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="question2" value="D"><span><p>Germany</p></span>
+                            </label>
+                        </li>
+                    </ul>
+                    <li>What family of plants is mustard in?</li>
+                    <ul class="choices">
+                        <li>
+                            <label>
+                                <input type="radio" name="question3" value="A"><span><p>Cucumbers</p></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="question3" value="B"><span><p>Cabbages</p></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="question3" value="C"><span><p>Legumes</p></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="question3" value="D"><span><p>Nuts</p></span>
+                            </label>
+                        </li>
+                    </ul>
+                    <li>How many calories are in one teaspoon of mustard?</li>
+                    <ul class="choices">
+                        <li>
+                            <label>
+                                <input type="radio" name="question4" value="A"><span><p>7</p></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="question4" value="B"><span><p>41</p></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="question4" value="C"><span><p>1,000,000</p></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="question4" value="D"><span><p>5</p></span>
                             </label>
                         </li>
                     </ul>
                 </ol>
+                <div>
+                    <button onclick="returnScore()">View Results</button>
+                    <p id="results">Results appear here</p>
+                </div>
+            </div>
+        </div>
+        <div class="headingcontainer">
+            <h1 class="heading" id="mustardprices">
+                Mustard Prices
+            </h1>
+        </div>
+        <div class="pricescontainer">
+            <div class="prices">
+                <img src="mustardprices.webp" alt="Graph showing mustard prices">
             </div>
         </div>
     </body>
