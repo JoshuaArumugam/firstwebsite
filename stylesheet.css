@@ -230,3 +230,15 @@ a {
 #mustardtypestitle {
     margin-top: 110px;
 }
+
+.mustardsoundcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mustardsoundcontainer > div {
+    background-color: black;
+    border: 2px solid white;
+    padding: 20px;
+}

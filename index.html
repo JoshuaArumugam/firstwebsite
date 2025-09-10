@@ -4,25 +4,6 @@
         <link rel="stylesheet" href="stylesheet.css">
         <title>Mustard</title>
         <link rel="icon" type="image/x-icon" href="mustardbackground.avif">
-        <script>
-            var answers = ["B", "D", "A", "B", "D"],
-            tot = answers.length;
-            function getCheckedValue(radioName) {
-                var radios = document.getElementsByName(radioName);
-                for (var y = 0; y < radios.length; y++)
-                    if (radios[y].checked) return radios[y].value;
-            }
-            function getScore() {
-                var score = 0;
-                for (var i = 0; i < tot; i++)
-                    if (getCheckedValue("question" + i) === answers[i]) score += 1;
-                return score;
-            }
-            function returnScore() {
-                document.getElementById("results").innerHTML =
-                    getScore() + "/" + tot;
-            }
-        </script>
     </head>
     <body>
         <div id="topbar">
@@ -32,6 +13,9 @@
             <ul id="navbar">
                 <li>
                     <a href="#typesofmustard"><p class="text navbartext">Types of Mustard</p></a>
+                </li>
+                <li>
+                    <a href="#mustardsound"><p class="text navbartext">Mustard Button</p></a>
                 </li>
                 <li>
                     <a href="#mustardrecipe"><p class="text navbartext">Mustard Recipe</p></a>
@@ -84,6 +68,16 @@
                         Whole grain mustard is roughly crushed or whole mustard seeds mixed with other ingredients just enough to make a paste. Brown mustard seeds are the best choice for whole grain mustard but yellow mustard seeds can be used as well. This paste is used for a variety of dishes as it is or mixed into sauces and dressings. 
                     </p>
                 </div>
+            </div>
+        </div>
+        <div class="headingcontainer">
+            <h1 class="heading" id="mustardsound">
+                Mustard Button (turn on sound)
+            </h1>
+        </div>
+        <div class="mustardsoundcontainer">
+            <div>
+                <button onclick="playAudio()">MUSTARD</button>
             </div>
         </div>
         <div class="headingcontainer">
@@ -269,5 +263,29 @@
                 <img src="mustardprices.webp" alt="Graph showing mustard prices">
             </div>
         </div>
+        <script>
+            var sound = new Audio('mustardkendrick.mp3')
+            function playAudio() {
+                sound.play();
+            }
+
+            var answers = ["B", "D", "A", "B", "D"],
+            tot = answers.length;
+            function getCheckedValue(radioName) {
+                var radios = document.getElementsByName(radioName);
+                for (var y = 0; y < radios.length; y++)
+                    if (radios[y].checked) return radios[y].value;
+            }
+            function getScore() {
+                var score = 0;
+                for (var i = 0; i < tot; i++)
+                    if (getCheckedValue("question" + i) === answers[i]) score += 1;
+                return score;
+            }
+            function returnScore() {
+                document.getElementById("results").innerHTML =
+                    getScore() + "/" + tot;
+            }
+        </script>
     </body>
 </html>
